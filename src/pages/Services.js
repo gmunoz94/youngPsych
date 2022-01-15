@@ -13,15 +13,15 @@ const styles = {
     }
 }
 
-function About() {
+function Services() {
 
     return(
         <div>
             <Container className="my-3" style={styles.contPad}>
-                About Test
+                Services Test
             </Container>
         </div>
     )
 }
 
-export default About;
+export default Services;

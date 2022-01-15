@@ -1,7 +1,5 @@
 import React from 'react';
-import emailIcon from "../assets/email.png";
-import phoneIcon from "../assets/phone.png";
-
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 // We declare an object called styles that will contain a few objects for card and heading styles
 // Notice that each key lists CSS styles in camel case
@@ -29,24 +27,25 @@ const styles = {
 // In Navbar, we can assign a style from an object by using curly braces
 function Header() {
   return (
-    <div style={styles.deep} className="mt-auto p-3 d-flex border-top justify-content-evenly fixed-bottom">
-        <div className="col-md-4 d-flex align-items-center">
-        <span className="text-white">Gerardo Munoz 2021</span>
-        </div>
-    
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li className="ms-2 text-center">
-            <a className="text-muted" href="mailto:gmunoz9619@gmail.com" style={styles.noDec}>
-              <img src={emailIcon} alt=""/>
-            </a>
-            </li>
-          <li className="ms-2 text-center">
-            <a className="text-muted" href="tel:5129861629" style={styles.noDec}>
-              <img src={phoneIcon} alt=""/>
-            </a>
-          </li>
-        </ul>
-    </div>
+    <Navbar style={styles.deep} className="p-3 d-flex border-top justify-content-evenly">
+        <Nav>
+          <Nav.Link href='/'>
+              <h4 className='text-white'>Alisa Young Therapy</h4>
+          </Nav.Link>
+        </Nav>
+        <Nav>
+          <Nav.Link href='/'>
+              <h4 className='text-white'>Home</h4>
+          </Nav.Link>
+          <Nav.Link href='/aboutMe'>
+              <h4 className='text-white'>About Me</h4>
+          </Nav.Link>
+          <Nav.Link href='/services'>
+              <h4 className='text-white'>Services</h4>
+          </Nav.Link>
+        </Nav>
+
+    </Navbar>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import emailIcon from "../assets/email.png";
-import phoneIcon from "../assets/phone.png";
+import { Container, Row } from 'react-bootstrap';
+// import emailIcon from "../assets/email.png";
+// import phoneIcon from "../assets/phone.png";
 
 
 // We declare an object called styles that will contain a few objects for card and heading styles
@@ -29,24 +30,12 @@ const styles = {
 // In Navbar, we can assign a style from an object by using curly braces
 function Footer() {
   return (
-    <div style={styles.deep} className="mt-auto p-3 d-flex border-top justify-content-evenly fixed-bottom">
-        <div className="col-md-4 d-flex align-items-center">
-        <span className="text-white">Gerardo Munoz 2021</span>
-        </div>
-    
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li className="ms-2 text-center">
-            <a className="text-muted" href="mailto:gmunoz9619@gmail.com" style={styles.noDec}>
-              <img src={emailIcon} alt=""/>
-            </a>
-            </li>
-          <li className="ms-2 text-center">
-            <a className="text-muted" href="tel:5129861629" style={styles.noDec}>
-              <img src={phoneIcon} alt=""/>
-            </a>
-          </li>
-        </ul>
-    </div>
+    <Container>
+      <Row style={styles.deep} className="mt-auto p-3 d-flex border-top justify-content-evenly fixed-bottom">
+        <h5>Dr. Alisa Young - <a href="mailto:alisa@alisayoungtherapy.com">Alisa@alisayoungtherapy.com</a></h5>
+        <h5><a href='tel:210-286-7744'>(210) 286-7744</a></h5>
+      </Row>
+    </ Container>
   );
 }
 
