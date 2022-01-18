@@ -21,7 +21,16 @@ const styles = {
   },
   deep: {
     backgroundColor: "#4A5759"
-},
+  },
+  homeLink: {
+    textDecoration: 'none'
+  },
+  aboutLink: {
+    textDecoration: 'none'
+  },
+  servicesLink: {
+    textDecoration: 'none'
+  },
 };
 
 // In Navbar, we can assign a style from an object by using curly braces
@@ -34,13 +43,13 @@ function Header() {
           </Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href='/'>
+          <Nav.Link href='/' id='homeLink' style={styles.homeLink}>
               <h4 className='text-white'>Home</h4>
           </Nav.Link>
-          <Nav.Link href='/aboutMe'>
+          <Nav.Link href='/aboutMe' id='aboutLink' style={styles.aboutLink}>
               <h4 className='text-white'>About Me</h4>
           </Nav.Link>
-          <Nav.Link href='/services'>
+          <Nav.Link href='/services' id='servicesLink' style={styles.servicesLink}>
               <h4 className='text-white'>Services</h4>
           </Nav.Link>
         </Nav>

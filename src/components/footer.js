@@ -23,15 +23,17 @@ const styles = {
     textDecoration: 'none'
   },
   deep: {
-    backgroundColor: "#4A5759"
+    backgroundColor: "#4A5759",
+    minWidth: '100%',
+    margin: '0'
 },
 };
 
 // In Navbar, we can assign a style from an object by using curly braces
 function Footer() {
   return (
-    <Container>
-      <Row style={styles.deep} className="mt-auto p-3 d-flex border-top justify-content-evenly fixed-bottom">
+    <Container style={styles.deep}>
+      <Row className="mt-auto p-3 d-flex border-top justify-content-evenly ">
         <h5>Dr. Alisa Young - <a href="mailto:alisa@alisayoungtherapy.com">Alisa@alisayoungtherapy.com</a></h5>
         <h5><a href='tel:210-286-7744'>(210) 286-7744</a></h5>
       </Row>
