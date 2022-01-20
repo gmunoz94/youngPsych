@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
+import headerImg from '../assets/nature1.jpg'
+import '../styles/style.css'
 
 // We declare an object called styles that will contain a few objects for card and heading styles
 // Notice that each key lists CSS styles in camel case
@@ -20,37 +22,32 @@ const styles = {
     textDecoration: 'none'
   },
   deep: {
-    backgroundColor: "#4A5759"
+    backgroundImg: `url(${headerImg})`
   },
-  homeLink: {
-    textDecoration: 'none'
-  },
-  aboutLink: {
-    textDecoration: 'none'
-  },
-  servicesLink: {
-    textDecoration: 'none'
-  },
+  headImg: {
+    width: '100%',
+    height: 'auto'
+  }
 };
 
 // In Navbar, we can assign a style from an object by using curly braces
 function Header() {
   return (
-    <Navbar style={styles.deep} className="p-3 d-flex border-top justify-content-evenly">
+    <Navbar className="p-3 d-flex border-top justify-content-evenly homeHeader align-items-start">
         <Nav>
           <Nav.Link href='/'>
-              <h4 className='text-white'>Alisa Young Therapy</h4>
+              <h4>Alisa Young Therapy</h4>
           </Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href='/' id='homeLink' style={styles.homeLink}>
-              <h4 className='text-white'>Home</h4>
+          <Nav.Link href='/' id='homeLink'>
+              <h4>Home</h4>
           </Nav.Link>
-          <Nav.Link href='/aboutMe' id='aboutLink' style={styles.aboutLink}>
-              <h4 className='text-white'>About Me</h4>
+          <Nav.Link href='/aboutMe' id='aboutLink'>
+              <h4>About Me</h4>
           </Nav.Link>
-          <Nav.Link href='/services' id='servicesLink' style={styles.servicesLink}>
-              <h4 className='text-white'>Services</h4>
+          <Nav.Link href='/services' id='servicesLink'>
+              <h4>Services</h4>
           </Nav.Link>
         </Nav>
 
